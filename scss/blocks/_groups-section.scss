@@ -1,0 +1,37 @@
+.groups-section {    
+    &__row {
+        @include flex-between;
+        margin-bottom: 12rem;
+        gap: 10px;
+        @include tablet-992 {
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 9rem;
+        }
+        @include tablet-small-768{
+            text-align: center;
+        }
+    }
+    &__row:nth-child(even) img {
+        order: 2;        
+    }
+    &__row:nth-child(even) {
+        @include tablet-992 {
+            flex-direction: column-reverse;
+        }
+    }
+    &__info {
+    }
+    .title {
+        max-width: 558px;
+    }
+    .desc {
+        max-width: 527px;
+        margin-bottom: 30px;
+    }
+    .btn {
+        @include btn;
+    }
+}
+
+

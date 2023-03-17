@@ -1,0 +1,40 @@
+.why-section {
+    margin-bottom: 9.9rem;    
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        @include tablet-992 {
+            grid-template-columns: repeat(2, 1fr); 
+        }
+        @include mobile-576 {
+            grid-template-columns: 1fr; 
+        }
+    }
+}
+.item {
+    background: $color-cards;
+    padding: 20px 17px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    transition: $transition;
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 1px 1px 10px $color-primary;
+    }   
+    img {
+        max-width: 83px;
+        margin-bottom: 13px;
+    }
+    &__title {
+        @include text ($ff, 2rem, 2.8rem, 700, $color-titles);
+        margin-bottom: 12px;
+    }
+
+    &__desc {
+        margin-bottom: 0;
+        text-align: center;
+    }
+}

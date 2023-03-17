@@ -1,0 +1,41 @@
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 11.4rem;
+    &__title {
+        @include text ($ff, 5.6rem, 7.8rem, 700, $color-titles);
+        max-width: 1046px;  
+        text-align: center;
+        letter-spacing: 0.02em;
+        margin-bottom: 38px;
+        span {
+            color: $color-primary;
+        }    
+    }
+    &__desc {
+        max-width: 828px;
+        margin-bottom: 38px;
+    }
+    .btn {        
+        @include btn;        
+        margin-bottom: 21px;
+    }
+    &__action {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        transition: $transition;
+            &:hover {
+                transform: scale(1.2);
+            } 
+        a {
+            display: inline-block;
+            text-decoration: underline;
+            @include text ($ff, 1.4rem, 2.4rem, 400, $color-text);
+                       
+        }
+    }
+}
+
+

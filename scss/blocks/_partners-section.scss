@@ -1,0 +1,20 @@
+.partners-section {
+    margin-bottom: 9.9rem;
+    text-align: center;
+    &__desc {
+        max-width: 875px;
+        margin-inline: auto;
+    }
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(6, 240px);
+        justify-content: center; 
+        @media screen and (max-width:1329px) {
+            grid-template-columns: repeat(auto-fill, 240px);
+        }        
+        @include mobile-576 {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;            
+        }  
+    }
+}

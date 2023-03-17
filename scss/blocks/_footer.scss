@@ -1,0 +1,101 @@
+.footer {    
+    &__top {
+        background: $color-primary;
+        padding: 28px 0 40px;  
+        @include tablet-small-768 {
+            padding-bottom: 15px;;
+        }      
+    }
+    &__container {
+        @include flex-between;
+        align-items: flex-start;
+              
+    }
+    &__bottom {
+        background: $footer-bottom-bg;
+        height: 80px;
+        @include tablet-small-768 {
+            display: none;
+        }
+    }
+    &__title {
+        @include text ($ff, 2rem, 2.8rem, 700, $white);
+        margin-bottom: 31px;
+    }
+    &__ul {
+        li {
+            margin-bottom: 8px;
+            transition: $transition;
+            @include text ($ff, 1.4rem, 2.4rem, 400, $white);
+            &:hover {
+                transform: scale(1.2) translateX(4px);
+            } 
+        }
+        a {
+            @include text ($ff, 1.4rem, 2.4rem, 400, $white);
+        }
+    }
+    &__socials {
+        display: flex;
+        gap: 18px;
+        margin-top: 32px;
+        img {
+            border-radius: 50%;
+            transition: $transition;
+            &:hover {
+            transform: scale(1.2);
+        } 
+        }        
+    }
+}
+.item1 {
+    max-width: 278px;    
+    &__title {
+        color: $white;
+        margin-bottom: 31px;
+    }
+    &__desc {
+        color: $white;
+    }
+}
+.item1, .item2, .item3 {
+    @include tablet-small-768 {
+        display: none;
+    }
+}
+.item4 { 
+    @include tablet-small-768 {
+        margin-inline: auto;
+    }   
+    &__ul {
+        li {
+        @include text ($ff, 1.4rem, 2.4rem, 400, $white);
+        margin-bottom: 8px;        
+        display: flex;
+        align-items: center;       
+        &:first-child:before {
+            content: url("../img/icons/mail.svg");
+            display: inline-block;
+            width: 16px;
+            height: 18px;             
+            margin-right: 18px;
+        }
+        &:last-child:before {
+            content: url("../img/icons/location.svg");
+            display: inline-block;
+            width: 16px;
+            height: 18px;             
+            margin-right: 18px;
+        }
+        &:nth-child(2):before {
+            content: url("../img/icons/phone.svg");
+            display: inline-block;
+            width: 16px;
+            height: 18px;             
+            margin-right: 18px;
+        }
+        }
+    }
+}
+
+

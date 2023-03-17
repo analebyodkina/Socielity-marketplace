@@ -1,0 +1,58 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+    @include tablet-small-768 {
+        font-size: 8px;
+    }
+}
+@font-face {
+    font-family: 'Segoe UI';
+    src: url(../fonts/AnyConv.com__Segoe\ UI.woff2);
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Segoe UI';
+    src: url(../fonts/AnyConv.com__Segoe\ UI\ Bold.woff2);
+    font-style: bold;
+    font-weight: 700;
+}
+
+.wrapper {
+    max-width: 1330px;
+    padding: 0 15px;
+    margin-inline: auto;
+}
+.container {
+    max-width: 1170px;
+    margin-inline: auto;
+}
+body {
+    font-family: $ff;
+    
+}
+h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0; 
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+ul {
+    list-style: none;
+}
+.title {
+    @include text($ff, 2.6rem, 4.8rem, 700, $color-titles);
+    margin-bottom: 2.4rem;
+}
+.desc {
+    @include text($ff, 1.6rem, 2.4rem, 400, $color-text);    
+    margin-bottom: 5rem; 
+}

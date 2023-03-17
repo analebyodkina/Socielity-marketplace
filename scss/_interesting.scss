@@ -1,0 +1,147 @@
+//  выезжает подчеркивание слева направо 
+.link{
+    transition: $transition;
+		&:after {
+			content: "";
+			background-color: $primary;
+			display: block;
+			height: 2px;
+			width: 0%;
+			position: relative;
+			top: 2px;
+			-webkit-transition: width .3s ease-in-out;
+			-moz--transition: width .3s ease-in-out;
+			transition: width .3s ease-in-out;
+		}
+		&:hover:after, &:focus:after {
+    	width: 100%;
+		}
+}
+
+
+// форма с кнопкой subscribe 
+<section class="subscribe-section">
+	<div class="subscribe-section__title">Subscribe to get the Latest News</div>
+	<div class="subscribe-section__desc">We recommended you to subscribe to our newspaper, drop your email below to get daily update about us</div>
+	<form class="subscribe-section__form">
+		<input type="email" placeholder="Enter your email addres">
+		<button class="btn _primary">
+			<img src="img/icons/send.svg" alt="send-icon">
+			<span>Subscribe</span>					
+		</button>
+	</form>	
+</section>
+
+&__form {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: $grad-input;
+	border-radius: 70px;
+	box-shadow: 10px 24px 54px rgba(0, 0, 0, 0.07);
+	justify-content: space-between;
+	padding: 10px 10px 10px 0;
+	// @include tablet-small {
+	// 	flex-direction: column;
+	// 	gap: 20px;
+	// 	background: transparent;
+	// 	для адаптива, чтоб кнопка стала в столбик                   
+	// }
+	input {
+		width: 100%;
+			background: transparent;            
+			border-radius: 70px;
+			padding: 15px 15px 15px 44px;
+			border: 0;
+			outline: 0; 
+			// @include tablet-small {                
+            //     background: $grad-input;
+			// 	для адаптива, чтоб бг біл только у инпута                                
+            // }          
+			@include text($ff, 400, 1.6rem, 2.6rem, $white);
+			&::placeholder {
+				@include text($ff, 400, 1.8rem, 3rem, $white); 
+				opacity: 0.9;                            
+			} 
+			&:focus {
+				border: 1px solid $primary;
+			}        
+		}
+	}
+	btn {
+		@include tablet-small {            
+			width: 100%;                      
+		}
+	}
+	
+	// псевдоэлемент
+
+	&::before {
+        content: url('../img/icons/check.svg');
+        display: block;
+        width: 12px;
+        height: 10px;        
+        position: absolute;
+        left: 0;        
+        top: 0;
+        padding-right: 20px;
+    }
+	
+
+	// как сделать противоположній порядок єлементов в секции (четной)
+
+<div class="care-section__row">
+	<div class="care-section__img">
+		<img src="img/care-image-1.png" alt="man using virtual reality">
+	</div>
+	<div class="care-section__info">
+		<div class="care-section__title">We complete every projects
+			extra care as customer need</div>
+		<div class="care-section__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum risus, non suscipit arcu. Quisque aliquam posuere tortor, sit amet convallis nuncoe scelerisque in. orem ipsum  dolor sit amet, consectetur adipisicing elit. Labore eius molestiae facere, natus reprehenderit eaque eum, autem ipsam. Magfini, error. Tempora odit laborum iure inventore possimus laboriosam qui nam. </div>				
+		<a href="#" class="btn _primary">Read more</a>					
+	</div>
+</div>
+<div class="care-section__row">
+	<div class="care-section__img">
+		<img src="img/care-image-2.png" alt="man using virtual reality">
+	</div>
+	<div class="care-section__info">
+		<div class="care-section__title">We complete every projects
+			extra care as customer need</div>
+		<div class="care-section__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum risus, non suscipit arcu. Quisque aliquam posuere tortor, sit amet convallis nuncoe scelerisque in. orem ipsum  dolor sit amet, consectetur adipisicing elit. Labore eius molestiae facere, natus reprehenderit eaque eum, autem ipsam. Magfini, error. Tempora odit laborum iure inventore possimus laboriosam qui nam. </div>				
+		<a href="#" class="btn _primary">Read more</a>					
+	</div>
+</div>	
+
+
+&__row {   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    &:nth-child(even) .care-section__img{
+        order: 2;
+    }
+    &:nth-child(even) .care-section__info {
+        order: 1;
+    }
+    }
+
+
+// чтоб менюшка от бургера не скролилась: 
+
+1. <html lang="en" id="html">  даем айди
+2.  в script.js 
+
+function navToggle() {
+    var headerUl = document.getElementById("headerUl");
+    headerUl.classList.toggle("active");
+
+	var html = document.getElementById("html");
+	html.classList.toggle("overflow-y-hidden");
+  }
+
+3. идем в BASE и пишем класс
+.overflow-y-hidden {
+	overflow-y: hidden;
+}
