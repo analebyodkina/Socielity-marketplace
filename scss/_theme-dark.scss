@@ -1,3 +1,74 @@
-body {    
-    background: $color-bg-dark;    
+html._dark {	
+	body {
+		background: $color-bg-dark;
+	}
+	.btn {
+		background: $color-primary-dark;
+		color: $color-bg-dark;		
+	}
+	.title { 
+		color: $white;
+	}
+	.desc {
+		color: $white;
+	}
+	.header {
+		&__logo {
+			color: $color-primary-dark;
+		}
+		&__ul a:not(.btn) {
+			color: $white;
+		}
+		.theme { 
+			background: $color-primary;
+			.dark-mode{
+				display: none;				
+			}
+			.light-mode {
+				display: inline-block;
+				color: $white;
+			}
+		}
+	}
+	.main-section {
+		&__title {
+			color: $white;
+		}
+		&__action a {
+			color: $color-youtube-dark;
+		}
+	}
+	.partners-section {
+		&__row {		
+			background: $partners-bg-dark;
+		}
+		.title {
+			color: $color-titles;
+		}
+	}
+	.why-section {
+		.row__item {
+			background: $color-cards-dark;
+		}
+		.item__title {
+			color: $white;
+		}
+	}
+	form {
+		background: $color-input-dark;
+		input {
+			@include mobile-576 {                
+                background: $color-input-dark;				                               
+            } 
+		}
+	}
+	.footer {    
+		&__top, &__bottom  {
+			background: $color-footer-dark;	
+		}
+	}
+
+
+
+
 }
