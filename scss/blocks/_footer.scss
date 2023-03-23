@@ -8,16 +8,15 @@
     }
     &__container {
         @include flex-between;
-        align-items: flex-start;
-              
+        align-items: flex-start;              
     }
     &__bottom {
         background: $footer-bottom-bg;
-        height: 80px;
+        height: 80px;        
         @include tablet-small-768 {
             display: none;
         }
-    }
+    }    
     &__title {
         @include text ($ff, 2rem, 2.8rem, 700, $white);
         margin-bottom: 31px;
@@ -68,11 +67,17 @@
         margin-inline: auto;
     }   
     &__ul {
-        li {
-        @include text ($ff, 1.4rem, 2.4rem, 400, $white);
+        li {        
         margin-bottom: 8px;        
         display: flex;
-        align-items: center;       
+        align-items: center;
+        transition: $transition;
+        a {
+            @include text ($ff, 1.4rem, 2.4rem, 400, $white);
+        } 
+        &:hover {
+            transform: scale(1.2) translateX(4px);
+        }      
         &:first-child:before {
             content: url("../img/icons/mail.svg");
             display: inline-block;

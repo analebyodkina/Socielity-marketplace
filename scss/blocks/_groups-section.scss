@@ -2,7 +2,7 @@
     &__row {
         @include flex-between;
         margin-bottom: 12rem;
-        gap: 10px;
+        gap: 53px;
         @include tablet-992 {
             flex-direction: column;
             gap: 30px;

@@ -21,12 +21,11 @@
             display: none;
         }
     }
-    
     &__ul {
         display: flex;
         align-items: center;
         gap: 40px;
-        .material-symbols-outlined {
+        .close {
             display: none;  
         }
         a {
@@ -48,11 +47,10 @@
         }
     }
     .btn {
-        @include btn;
-        transition: $transition;
-            &:hover {
-                color: $white;
-            }
+        @include btn;        
+        &:hover {
+            color: $white;
+        }
     }
 }
 

@@ -20,7 +20,7 @@ form {
         padding: 15px 0;		                  
 	}
     input {
-		width: 100%;
+		flex-grow: 1;
 			background: transparent;            
 			border-radius: 16px;
 			padding: 11px 15px 11px 34px;

@@ -17,9 +17,9 @@
         max-width: 828px;
         margin-bottom: 38px;
     }
-    .btn {        
+    .btn {               
         @include btn;        
-        margin-bottom: 21px;
+        margin-bottom: 21px;     
     }
     &__action {
         display: flex;
